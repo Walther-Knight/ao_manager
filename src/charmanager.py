@@ -32,7 +32,7 @@ class CharacterNode:
 
         #derive tertiary
         self.reaction = math.ceil((self.athl + self.wisd)/2)
-        self.physis = math.floor((self.str + self.agi + self.con + self.vit + self.dis + self.int + self.cha)/7)
+        self.physis = round((self.str + self.agi + self.con + self.vit + self.dis + self.int + self.cha)/7)
         self.endurance = self.con + self.dis
         self.health = self.con + self.vit
         self.defense = math.ceil(self.reaction / 2)
@@ -71,3 +71,6 @@ class CharacterNode:
         print(f"Primary Qualities:\nStrength: {self.str}\nAgility: {self.agi}\nConditioning: {self.con}\nVitality: {self.vit}\nDiscipline: {self.dis}\nIntelligence: {self.int}\nCharisma: {self.cha}\n")
         print(f"Secondary Qualities:\nAthleticism: {self.athl}\nPhysical Acumen: {self.phac}\nFitness: {self.fitn}\nWill: {self.will}\nWisdom: {self.wisd}\nWit: {self.wit}\nPresence: {self.pres}\n")
         print(f"Tertiary Qualities:\nReaction: {self.reaction}\nPhysis: {self.physis}\nDefense Rating: {self.defense}")
+
+    def print_move_rate(self):
+        print(f"Movement Rates:\n{self.moverate}")
